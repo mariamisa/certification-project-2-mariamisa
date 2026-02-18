@@ -9,7 +9,37 @@
 </head>
 <body>
   <!-- You will add your semantic HTML below this line -->
-   <p> Hello </p> <!-- You can remove this -->
+   <main>
+		<header>
+        <img src="./images/logo.png" alt="Game Logo" class="logo">
+        <h1>Rock Paper Scissors</h1>
+    </header>
+
+		<section class="description-section">
+        <button id="toggleDescription">Show Game Rules</button>
+        <p id="gameDescription" class="hidden">
+            Welcome to Rock Paper Scissors! <br>
+            You will play 3 rounds against the computer. <br>
+            Rules: Rock beats Scissors, Scissors beats Paper, Paper beats Rock. <br>
+            Each win gives you +1, loss -1, tie 0. After 3 rounds, see if you win!
+        </p>
+    </section>
+
+		<section id="game">
+			<!-- <button id="startBtn" onclick="startGame()">Start Game</button> -->
+			<!-- <button id="resetBtn" class="hidden">Restart Game</button> -->
+			<button id="playBtn">Start Game</button>
+			<div id="btn_container" class="hidden"></div>
+
+			<div id="results" class="hidden">
+				<p>Attempts left: <span id="attempts">3</span></p>
+				<p>Score: <span id="score">0</span></p>
+				<p>Message: <span id="message">Play!</span></p>
+				<p>History: <span id="history"></span></p>
+			</div>
+			<br>
+		</section>
+  </main>
 
   <!-- You will add your semantic HTML above this line -->
   <script src="./script.js"></script>
