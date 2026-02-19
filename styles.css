@@ -46,39 +46,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /** Your CSS goes below this line **/
-:root {
-  --bg-gradient: linear-gradient(135deg, #f9f9f9, #e0f7fa);
-  --surface: rgba(255, 255, 255, 0.75);
-  --card: rgba(255, 255, 255, 0.4);
-  --primary: #00796b;
-  --primary-dark: #004d40;
-  --accent: #26a69a;
-  --text-main: #333;
-  --text-dark: #2c3e50;
-  --text-light: #fff;
-  --success: #2ecc71;
-  --danger: #e74c3c;
-  --warning: #f1c40f;
-  --fs-xl: 2rem;
-  --fs-lg: 1.2rem;
-  --fs-md: 1rem;
-  --fw-bold: 700;
-  --fw-semi: 600;
-  --space-1: 10px;
-  --space-2: 20px;
-  --space-3: 30px;
-  --radius: 12px;
-  --radius-lg: 20px;
-  --shadow: 0 8px 20px rgba(0,0,0,0.08);
-  --transition: 0.25s ease;
-  --max-width: 550px;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--ff);
 }
 
 body {
@@ -105,6 +77,11 @@ header {
   background: var(--surface);
   box-shadow: var(--shadow);
 }
+.title-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 
 header h1 {
   font-size: var(--fs-xl);
@@ -121,7 +98,10 @@ header h1 {
 .logo:hover {
   transform: rotate(10deg);
 }
-
+#toggleDescription{
+  height: 50px;
+  width: 50px;
+}
 .description-section {
   text-align: center;
   margin-bottom: var(--space-2);
@@ -148,18 +128,16 @@ button {
   font-size: var(--fs-md);
   font-weight: var(--fw-semi);
   transition: all var(--transition);
-}
-
-#playBtn,
-#toggleDescription {
-  padding: var(--space-1) var(--space-3);
   background: linear-gradient(145deg, var(--accent), var(--primary));
   color: var(--text-light);
   box-shadow: var(--shadow);
 }
 
-#playBtn:hover,
-#toggleDescription:hover {
+#playBtn {
+  padding: var(--space-1) var(--space-3);
+}
+
+#playBtn:hover {
   background: linear-gradient(145deg, var(--primary), var(--primary-dark));
   transform: translateY(-2px);
 }
@@ -181,6 +159,7 @@ button {
 }
 #btn_container button img{
   width: 70px;
+  margin: auto;
 }
 
 #btn_container button:hover {
@@ -217,9 +196,11 @@ button {
   }
 
   #btn_container button,
-  #playBtn,
-  #toggleDescription {
+  #playBtn {
     width: 100%;
+  }
+  #toggleDescription{
+    align-self: center;
   }
 }
 

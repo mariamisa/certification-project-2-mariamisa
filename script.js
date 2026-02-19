@@ -23,14 +23,14 @@ const results = document.getElementById("results");
 // Toggle Game Rules
 toggleDescription.addEventListener("click", () => {
 	const hidden = gameDescription.classList.toggle("hidden");
-	toggleDescription.textContent = hidden ? "Show Game Rules" : "Hide Game Rules";
+	toggleDescription.textContent = hidden ? "+" : "-";
 });
 
 // Create Buttons
 options.forEach(option => {
 	const btn = document.createElement("button");
 	const img = document.createElement("img");
-	img.src = `./images/${option}.png`;
+	img.src = `./images/${option}.svg`;
 	img.alt = option;
 	btn.appendChild(img);
 

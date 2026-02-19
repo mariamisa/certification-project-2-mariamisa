@@ -12,11 +12,13 @@
    <main>
 		<header>
         <img src="./images/logo.png" alt="Game Logo" class="logo">
-        <h1>Rock Paper Scissors</h1>
+        <div class="title-container">
+          <h1>Rock Paper Scissors  </h1>
+          <button id="toggleDescription">+</button> 
+        </div>
     </header>
 
 		<section class="description-section">
-        <button id="toggleDescription">Show Game Rules</button>
         <p id="gameDescription" class="hidden">
             Welcome to Rock Paper Scissors! <br>
             You will play 3 rounds against the computer. <br>
@@ -26,8 +28,6 @@
     </section>
 
 		<section id="game">
-			<!-- <button id="startBtn" onclick="startGame()">Start Game</button> -->
-			<!-- <button id="resetBtn" class="hidden">Restart Game</button> -->
 			<button id="playBtn">Start Game</button>
 			<div id="btn_container" class="hidden"></div>
 
